@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Biblioteca.Alta"
+             Title="Alta">
+    <VerticalStackLayout>
+        <HorizontalStackLayout Margin="10">
+            <Label 
+                Text="Título:" 
+                VerticalOptions="Center" 
+                WidthRequest="80"/>
+
+            <Entry 
+                x:Name="tituloEntry" 
+                HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Margin="10">
+            <Label 
+                Text="Autor:" 
+                VerticalOptions="Center" 
+                WidthRequest="80"/>
+            <Entry 
+                x:Name="autorEntry" 
+                HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Margin="10">
+            <Label 
+                Text="Editorial:" 
+                VerticalOptions="Center" 
+                WidthRequest="80"/>
+            <Entry 
+                x:Name="editorialEntry" 
+                HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <Button 
+                Text="Guardar" 
+                x:Name="guardarButton" 
+                HorizontalOptions="Center" 
+                Margin="10"
+                Clicked="OnGuardarButtonClicked"/>
+
+            <Button
+                Text="Limpiar" 
+                x:Name="limpiarButton" 
+                HorizontalOptions="Center" 
+                Margin="10"
+                Clicked="OnLimpiarButtonClicked"/>
+
+            <Button
+                Text="Seleccionar imagen" 
+                x:Name="imagenButton" 
+                HorizontalOptions="Center" 
+                Margin="10"
+                Clicked="OnImagenButtonClicked"/>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
