@@ -6,8 +6,56 @@
              BackgroundColor="#AC7434">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Tipo de consulta:"
+            FontSize="24"
+            Margin="50"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <RadioButton 
+            x:Name="autorRadioButton" 
+            Content="Autor"
+            GroupName="consultaGroup"
+            FontSize="20"
+            Margin="10"
+            HorizontalOptions="Center" />
+
+        <RadioButton
+            x:Name="editorialRadioButton" 
+            Content="Editorial"
+            GroupName="consultaGroup"
+            FontSize="20"
+            Margin="10"
+            HorizontalOptions="Center" />
+
+        <Grid ColumnDefinitions="*,*,Auto" Padding="10,20,10,5">
+            <Label Text="Título" FontAttributes="Bold" Grid.Column="0" />
+            <Label Text="Autor/Editorial" FontAttributes="Bold" Grid.Column="1" />
+            <Label Text="Portada" FontAttributes="Bold" Grid.Column="2" />
+        </Grid>
+        <!-- Filtros de autor o editorial -->
+        <CollectionView x:Name="filtroCollectionView" SelectionMode="Single" SelectionChanged="OnFiltroSeleccionado" HeightRequest="80">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding .}" FontSize="18" Padding="10" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Títulos filtrados -->
+        <CollectionView x:Name="titulosCollectionView" SelectionMode="Single" SelectionChanged="OnTituloSeleccionado" HeightRequest="80">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,*,Auto">
+                        <Label Text="{Binding Titulo}" FontSize="18" Padding="10" Grid.Column="0"/>
+                        <Label Text="{Binding AutorOEditorial}" FontSize="18" Padding="10" Grid.Column="1"/>
+                        <Image Source="{Binding Portada}" HeightRequest="50" WidthRequest="40" Aspect="AspectFit" Grid.Column="2"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Portada del libro seleccionado -->
+        <Image x:Name="portadaImage" HeightRequest="150" Margin="20" Aspect="AspectFit"/>
     </VerticalStackLayout>
 </ContentPage>

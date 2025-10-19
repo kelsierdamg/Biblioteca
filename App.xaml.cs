@@ -1,8 +1,10 @@
-﻿namespace Biblioteca
+﻿using System.Collections.ObjectModel;
+
+namespace Biblioteca
 {
     public partial class App : Application
     {
-        public List<Libro> Libros { get; set; } = new();
+        public ObservableCollection<Libro> Libros { get; set; } = new();
         public App()
         {
             InitializeComponent();
