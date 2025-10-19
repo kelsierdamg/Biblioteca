@@ -2,6 +2,7 @@
 {
     public partial class App : Application
     {
+        public List<Libro> Libros { get; set; } = new();
         public App()
         {
             InitializeComponent();

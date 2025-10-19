@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Biblioteca
 {
-    internal class Libro
+    public class Libro
     {
         public string Titulo { get; set; }
         public string Autor { get; set; }
@@ -20,5 +20,8 @@ namespace Biblioteca
             Editorial = editorial;
             Portada = portada;
         }
+
+        public ImageSource ImagenPortada =>
+            string.IsNullOrEmpty(Portada) ? null : ImageSource.FromFile(Portada);
     }
 }

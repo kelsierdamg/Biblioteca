@@ -2,9 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Biblioteca.Alta"
-             Title="Alta">
+             Title="Alta"
+             BackgroundColor="#AC7434">
+
     <VerticalStackLayout>
-        <HorizontalStackLayout Margin="10">
+        <HorizontalStackLayout Margin="10" HorizontalOptions="Center">
             <Label 
                 Text="Título:" 
                 VerticalOptions="Center" 
@@ -12,35 +14,43 @@
 
             <Entry 
                 x:Name="tituloEntry" 
-                HorizontalOptions="Center"/>
+                HorizontalOptions="FillAndExpand"/>
         </HorizontalStackLayout>
 
-        <HorizontalStackLayout Margin="10">
+        <HorizontalStackLayout Margin="10" HorizontalOptions="Center">
             <Label 
                 Text="Autor:" 
                 VerticalOptions="Center" 
                 WidthRequest="80"/>
             <Entry 
                 x:Name="autorEntry" 
-                HorizontalOptions="Center"/>
+                HorizontalOptions="FillAndExpand"/>
         </HorizontalStackLayout>
 
-        <HorizontalStackLayout Margin="10">
+        <HorizontalStackLayout Margin="10" HorizontalOptions="Center">
             <Label 
                 Text="Editorial:" 
                 VerticalOptions="Center" 
                 WidthRequest="80"/>
             <Entry 
                 x:Name="editorialEntry" 
-                HorizontalOptions="Center"/>
+                HorizontalOptions="FillAndExpand"/>
         </HorizontalStackLayout>
 
-        <HorizontalStackLayout>
+        <Image 
+            x:Name="portadaImagen"
+            HeightRequest="150"
+            Margin="10"
+            Aspect="AspectFit" />
+
+        <HorizontalStackLayout HorizontalOptions="Center">
             <Button 
                 Text="Guardar" 
                 x:Name="guardarButton" 
                 HorizontalOptions="Center" 
                 Margin="10"
+                BackgroundColor="#641C34"
+                TextColor="White"
                 Clicked="OnGuardarButtonClicked"/>
 
             <Button
@@ -48,6 +58,8 @@
                 x:Name="limpiarButton" 
                 HorizontalOptions="Center" 
                 Margin="10"
+                BackgroundColor="#641C34"
+                TextColor="White"
                 Clicked="OnLimpiarButtonClicked"/>
 
             <Button
@@ -55,6 +67,8 @@
                 x:Name="imagenButton" 
                 HorizontalOptions="Center" 
                 Margin="10"
+                BackgroundColor="#641C34"
+                TextColor="White"
                 Clicked="OnImagenButtonClicked"/>
         </HorizontalStackLayout>
 
