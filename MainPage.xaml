@@ -7,7 +7,7 @@
         <Image
             Source="library.jpg"
             Aspect="AspectFill"
-            Opacity="0.7"/>
+            Opacity="1"/>
 
         <VerticalStackLayout
             Padding="200"
@@ -18,13 +18,13 @@
             FontAttributes="Bold"
             FontSize="40"
             HorizontalOptions="Center"
-            TextColor="White"/>
+            TextColor="Black"/>
 
             <Label
             Text="IES Valle Inclán"
             FontSize="32"
             HorizontalOptions="Center"
-            TextColor="White"
+            TextColor="Black"
             HorizontalTextAlignment="Center"/>
         </VerticalStackLayout>
     </Grid>
